@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>451C 数字能量 - 手机号码磁场分析 | 八星灵数在线测算</title>
+    <meta name="description" content="451C数字能量学，基于八星磁场理论免费分析手机号码。提供天医、生气、延年、伏位、祸害、绝命、六煞、五鬼八大磁场详解与手机号在线测算工具。">
+    <meta name="keywords" content="数字能量,手机号码分析,八星磁场,天医,延年,生气,伏位,手机号测吉凶,数字磁场,451C">
+    <link rel="canonical" href="https://www.451c.com/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔮</text></svg>">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="451C 数字能量 - 免费手机号码分析">
+    <meta property="og:description" content="在线手机号码八星磁场分析工具，基于数字能量学免费测算手机号的能量组合。">
+    <meta property="og:url" content="https://www.451c.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="451C 数字能量">
+    <meta property="og:locale" content="zh_CN">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="451C 数字能量 - 手机号码磁场分析">
+    <meta name="twitter:description" content="免费在线手机号码八星磁场分析，基于数字能量学理论，快速分析您的手机号吉凶磁场组合。">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "451C数字能量分析",
+      "url": "https://www.451c.com/",
+      "description": "基于八星磁场理论的手机号码在线分析工具，免费测算手机号的数字能量组合。",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<!-- ====== 加载指示器 ====== -->
+<div id="pageLoader" class="page-loader" aria-hidden="true">
+    <div class="loader-spinner"></div>
+</div>
+
+<!-- ====== Navigation ====== -->
+<header class="site-header" role="banner">
+    <div class="header-inner">
+        <a href="/" class="logo" aria-label="451C 首页">
+            <span class="logo-icon">◆</span>
+            <span class="logo-text">451C</span>
+        </a>
+
+        <button class="mobile-menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+
+        <nav class="main-nav" id="mainNav" role="navigation">
+            <a href="/" data-i18n="nav.home">首页</a>
+            <a href="#analyzer" data-i18n="nav.analyzer">号码分析</a>
+            <a href="#yijing" data-i18n="nav.yijing">数字与易经</a>
+            <a href="#applications" data-i18n="nav.apps">数字应用</a>
+            <a href="#app-download" data-i18n="nav.app">APP下载</a>
+            <a href="#contact" data-i18n="nav.contact">联系我们</a>
+        </nav>
+
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="zh-CN" aria-label="简体中文">简</button>
+            <button class="lang-btn" data-lang="zh-TW" aria-label="繁體中文">繁</button>
+            <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+    </div>
+</header>
+
+<!-- ====== Hero ====== -->
+<section class="hero" role="banner">
+    <div class="hero-particles" aria-hidden="true"></div>
+    <div class="hero-content">
+        <h1 class="hero-title" data-i18n="hero.title">探索数字背后的能量</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">依托八星磁场理论，解读手机号码中的数字能量密码，助您了解财运、事业、感情与健康</p>
+        <a href="#analyzer" class="hero-cta" data-i18n="hero.cta">免费分析号码</a>
+    </div>
+</section>
+
+<!-- ====== 号码测吉凶（分析器） ====== -->
+<section id="analyzer" class="section analyzer-section" aria-label="号码分析">
+    <div class="container">
+        <div class="analyzer-card">
+            <h2 class="analyzer-card-title" data-i18n="ana.title">手机号 · 测吉凶</h2>
+
+            <form id="analyzeForm" class="analyzer-form" onsubmit="return false;">
+                <div class="input-group">
+                    <input type="tel" id="phoneInput"
+                           data-i18n-placeholder="ana.placeholder"
+                           placeholder="输入11位手机号"
+                           maxlength="11" inputmode="numeric" autocomplete="off">
+                    <button type="submit" class="btn-analyze" id="analyzeBtn">
+                        <span id="btnText" data-i18n="ana.btn">提交分析</span>
+                        <span id="btnSpinner" style="display:none">
+                            <span class="spinner"></span>
+                            <span data-i18n="ana.analyzing">分析中...</span>
+                        </span>
+                    </button>
+                </div>
+                <p class="analyzer-hint" data-i18n="ana.hint">已加密处理，本站不留存任何号码信息</p>
+            </form>
+
+            <!-- 结果区 -->
+            <div id="result-area" style="display:none">
+                <div class="result-divider"></div>
+
+                <div class="result-topbar">
+                    <div class="phone-display" id="phoneDisplay"></div>
+                    <div class="result-score-compact">
+                        <div class="score-ring-sm" id="scoreRing">0</div>
+                        <div>
+                            <div class="verdict-tag" id="verdictTitle">分析中</div>
+                            <div class="verdict-sub" id="verdictSub"><span data-i18n="ana.rescore">综合评分</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="segment-visualization">
+                    <div class="segment-row" id="segmentRow"></div>
+                </div>
+
+                <div class="result-threecol">
+                    <div class="result-col field-stats" id="fieldStats"></div>
+                    <div class="result-col" id="tailCol">
+                        <div class="tail-analysis" id="tailAnalysis">
+                            <div class="tail-title" data-i18n="ana.tail">尾号能量</div>
+                            <div class="tail-text"></div>
+                        </div>
+                    </div>
+                    <div class="result-col" id="detailCol">
+                        <div class="result-details" id="resultDetails"></div>
+                    </div>
+                </div>
+
+                <div class="result-footer-actions">
+                    <button type="button" class="btn-secondary" id="resetBtn" data-i18n="ana.reanalyze">重新分析</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== 数字与易经 ====== -->
+<section id="yijing" class="section yijing-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="yj.title">数字与易经</h2>
+            <p class="section-desc" data-i18n="yj.desc">数字与易经同源，河图洛书揭示了数字的宇宙密码，八卦对应着世间万物。</p>
+        </div>
+
+        <div class="card-grid three-col">
+            <div class="info-card fade-up">
+                <div class="card-icon">☯</div>
+                <h3 class="card-title" data-i18n="yj.hetu">河图洛书</h3>
+                <p class="card-text" data-i18n="yj.hetuDesc">河图洛书是易经的源头，以数字矩阵揭示天地万物的生成规律。一六共宗为水，二七同道为火，三八为朋为木，四九为友为金，五十同途为土。</p>
+            </div>
+
+            <div class="info-card fade-up">
+                <div class="card-icon">⚊</div>
+                <h3 class="card-title" data-i18n="yj.bagua">八卦与数字</h3>
+                <p class="card-text" data-i18n="yj.baguaDesc">先天八卦对应数字：乾一、兑二、离三、震四、巽五、坎六、艮七、坤八。每个卦象都代表着特定的能量频率。</p>
+            </div>
+
+            <div class="info-card fade-up">
+                <div class="card-icon">🔥</div>
+                <h3 class="card-title" data-i18n="yj.wuxing">五行生克</h3>
+                <p class="card-text" data-i18n="yj.wuxingDesc">五行（金木水火土）之间存在相生相克的关系。数字能量中的八星磁场与五行密切对应，生克平衡则吉，失衡则凶。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== 数字应用 ====== -->
+<section id="applications" class="section apps-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="appsec.title">数字应用场景</h2>
+            <p class="section-desc" data-i18n="appsec.desc">数字能量在生活中的广泛应用，帮助您在各个方面做出更好的选择。</p>
+        </div>
+
+        <div class="card-grid three-col">
+            <div class="info-card fade-up">
+                <div class="card-icon">📱</div>
+                <h3 class="card-title" data-i18n="appsec.card1">选号技巧</h3>
+                <p class="card-text" data-i18n="appsec.card1Desc">学会如何根据八星磁场选择对自己有利的手机号码，避开凶星组合。天医+延年组合最利财运。</p>
+            </div>
+
+            <div class="info-card fade-up">
+                <div class="card-icon">🚗</div>
+                <h3 class="card-title" data-i18n="appsec.card2">车牌号分析</h3>
+                <p class="card-text" data-i18n="appsec.card2Desc">车牌号码的能量同样影响出行安全。分析车牌数字组合，选择适合您命理五行的号码。</p>
+            </div>
+
+            <div class="info-card fade-up">
+                <div class="card-icon">🏢</div>
+                <h3 class="card-title" data-i18n="appsec.card3">门牌与公司名</h3>
+                <p class="card-text" data-i18n="appsec.card3Desc">门牌号和公司名称中的数字组合影响着居住和办公环境的能量场，合理选择有利于事业发展和家庭和睦。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== APP下载 ====== -->
+<section id="app-download" class="section app-download-section">
+    <div class="container">
+        <div class="app-download-wrapper fade-up">
+            <div class="app-mockup" aria-hidden="true">
+                <div class="mockup-screen">
+                    <div class="mockup-header">451C</div>
+                    <div class="mockup-body">
+                        <div class="mockup-line"></div>
+                        <div class="mockup-line short"></div>
+                        <div class="mockup-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-info">
+                <h2 class="app-title" data-i18n="app.title">随时随地 · 数字能量</h2>
+                <p class="app-desc" data-i18n="app.desc">下载 451C App，随时随地查询手机号码能量、学习数字知识、获取每日运势提醒。</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-btn app-store" onclick="return false;">
+                        <span class="app-btn-icon">🍎</span>
+                        <span class="app-btn-text">
+                            <small data-i18n="app.coming">即将上线</small>
+                            <strong data-i18n="app.store">App Store</strong>
+                        </span>
+                    </a>
+                    <a href="#" class="app-btn google-play" onclick="return false;">
+                        <span class="app-btn-icon">▶</span>
+                        <span class="app-btn-text">
+                            <small data-i18n="app.coming">即将上线</small>
+                            <strong data-i18n="app.android">Google Play</strong>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== 联系我们 ====== -->
+<section id="contact" class="section contact-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="contact.title">联系我们</h2>
+            <p class="section-desc" data-i18n="contact.desc">有任何问题或建议，欢迎随时与我们联系。</p>
+        </div>
+
+        <div class="contact-wrapper fade-up">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div>
+                        <strong data-i18n="contact.email">邮箱</strong>
+                        <span>contact@451c.com</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">💬</span>
+                    <div>
+                        <strong data-i18n="contact.wechat">微信</strong>
+                        <span>451C数字能量</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <strong data-i18n="contact.phone">电话</strong>
+                        <span>400-000-0000</span>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <a href="#" class="social-icon" aria-label="微信" onclick="return false;">💬</a>
+                    <a href="#" class="social-icon" aria-label="微博" onclick="return false;">📱</a>
+                    <a href="#" class="social-icon" aria-label="知乎" onclick="return false;">📝</a>
+                    <a href="#" class="social-icon" aria-label="B站" onclick="return false;">▶️</a>
+                    <a href="#" class="social-icon" aria-label="小红书" onclick="return false;">📕</a>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <input type="text" class="form-input" data-i18n-placeholder="contact.formName" placeholder="您的姓名" required>
+                <input type="email" class="form-input" data-i18n-placeholder="contact.formEmail" placeholder="您的邮箱" required>
+                <textarea class="form-input form-textarea" rows="4" data-i18n-placeholder="contact.formMsg" placeholder="您的留言" required></textarea>
+                <div class="form-footer">
+                    <button type="submit" class="btn-submit" data-i18n="contact.formBtn">发送消息</button>
+                    <span class="form-hint" data-i18n="contact.formHint">我们会尽快回复您</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ====== Footer（仿 shamanism.com 社交板块）===== -->
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">◆ 451C</div>
+                <p class="footer-desc" data-i18n="footer.tagline">专注于数字能量学研究，提供免费的手机号码八星磁场分析服务。</p>
+                <div class="footer-social" data-i18n="footer.social">
+                    <span>关注我们：</span>
+                    <a href="#" class="social-icon" aria-label="微信" onclick="return false;">💬</a>
+                    <a href="#" class="social-icon" aria-label="微博" onclick="return false;">📱</a>
+                    <a href="#" class="social-icon" aria-label="知乎" onclick="return false;">📝</a>
+                    <a href="#" class="social-icon" aria-label="B站" onclick="return false;">▶️</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.nav">快速导航</h4>
+                <a href="/" data-i18n="nav.home">首页</a>
+                <a href="#analyzer" data-i18n="nav.analyzer">号码分析</a>
+                <a href="#yijing" data-i18n="nav.yijing">数字与易经</a>
+                <a href="#applications" data-i18n="nav.apps">数字应用</a>
+                <a href="#contact" data-i18n="nav.contact">联系我们</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.social">关注我们</h4>
+                <a href="#" onclick="return false;">微信</a>
+                <a href="#" onclick="return false;">微博</a>
+                <a href="#" onclick="return false;">知乎</a>
+                <a href="#" onclick="return false;">B站</a>
+                <a href="#" onclick="return false;">小红书</a>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2025-2026 451C.com · 数字能量学 · 尽人事，听天命</p>
+            <p class="footer-disclaimer" data-i18n="footer.disclaimer">声明：本站内容仅供娱乐参考，请理性看待数字能量对生活的影响。</p>
+        </div>
+    </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="scroll-top" id="scrollTop" aria-label="回到顶部">↑</button>
+
+<!-- 八星磁场数据 + 分析引擎 -->
+<script src="/assets/js/analyzer.js"></script>
+<!-- 主脚本（i18n + 导航 + 交互） -->
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
