@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章中心 - 451C 数字能量</title>
+    <meta name="description" content="451C数字能量文章中心，包含八星磁场详解、数字组合解析、选号技巧等系统性的数字能量学知识文章。">
+    <link rel="canonical" href="https://www.451c.com/articles/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔮</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .page-header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 12px; }
+        .page-header p { opacity: .9; max-width: 560px; margin: 0 auto; }
+        .content-section { padding: 60px 0; }
+        .articles-list { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); 
+            gap: 24px; 
+        }
+        .article-card { 
+            background: #fff; 
+            border-radius: var(--radius); 
+            border: 1px solid var(--gray-200); 
+            padding: 24px; 
+            transition: all .2s; 
+            display: flex;
+            flex-direction: column;
+        }
+        .article-card:hover { 
+            box-shadow: var(--shadow-md); 
+            transform: translateY(-2px);
+            border-color: var(--gray-300);
+        }
+        .article-card .tag { 
+            font-size: .7rem; 
+            text-transform: uppercase; 
+            letter-spacing: .5px; 
+            color: var(--primary); 
+            font-weight: 600; 
+            margin-bottom: 8px; 
+        }
+        .article-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; line-height: 1.4; }
+        .article-card h3 a { color: var(--gray-800); }
+        .article-card h3 a:hover { color: var(--primary); }
+        .article-card p { font-size: .85rem; color: var(--gray-500); line-height: 1.6; flex: 1; }
+        .article-card .meta { font-size: .75rem; color: var(--gray-400); margin-top: 12px; }
+        .category-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; justify-content: center; }
+        .filter-btn {
+            padding: 6px 18px;
+            border-radius: 999px;
+            border: 1px solid var(--gray-200);
+            background: #fff;
+            font-size: .85rem;
+            cursor: pointer;
+            transition: all .2s;
+            color: var(--gray-600);
+        }
+        .filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+        .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+        @media (max-width: 768px) {
+            .articles-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a href="/" class="logo"><span>451C</span><span class="logo-sub">数字能量</span></a>
+            <nav class="main-nav" role="navigation">
+                <a href="/">首页分析</a>
+                <a href="/#fields">磁场知识</a>
+                <a href="/articles/" class="active">文章中心</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>数字能量文章中心</h1>
+        <p>系统性的八星磁场知识库，从基础入门到深度组合解析，帮助你全面了解数字能量学。</p>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="category-filter" id="categoryFilter"></div>
+            <div class="articles-list" id="articlesList"></div>
+        </div>
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>451C 数字能量</h3>
+                    <p>专注于数字能量学研究，提供免费的手机号码八星磁场分析服务。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <a href="/">首页分析</a>
+                    <a href="/#fields">磁场知识</a>
+                    <a href="/articles/">文章中心</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 451C.com · 数字能量学</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const ARTICLES = [
+            { tag:'基础知识', title:'数字能量八星磁场完整对照表（2025）', url:'/articles/bazhen-duizhao.html', desc:'八星磁场分为四吉星和四凶星，每个星位都有对应的数字组合和独特能量含义。本文整理最新完整对照表。', date:'2025-05-25' },
+            { tag:'磁场详解', title:'天医磁场详解：财运、婚姻与正桃花', url:'/articles/tianyi-xiangjie.html', desc:'天医磁场是八大磁场中最吉祥的磁场，代表财富、婚姻和智慧。本文详解天医磁场的4个能量等级。', date:'2025-05-24' },
+            { tag:'磁场详解', title:'生气磁场详解：贵人运与人脉拓展', url:'/articles/shengqi-xiangjie.html', desc:'生气磁场代表贵人运和人脉。拥有生气磁场的人性格开朗、人缘好，容易得到他人帮助。', date:'2025-05-24' },
+            { tag:'磁场详解', title:'延年磁场详解：事业运与领导能力', url:'/articles/yannian-xiangjie.html', desc:'延年磁场代表事业和领导能力，拥有延年磁场的人事业心强，有领导才能。', date:'2025-05-23' },
+            { tag:'磁场详解', title:'伏位磁场详解：稳定、耐心与积蓄能量', url:'/articles/fuwei-xiangjie.html', desc:'伏位磁场代表稳定和积蓄，是中性磁场。其吉凶取决于前后搭配的数字。', date:'2025-05-23' },
+            { tag:'磁场详解', title:'祸害磁场：口舌是非的真相与应对', url:'/articles/huohai-xiangjie.html', desc:'祸害磁场代表口舌是非和身体问题。但祸害磁场也有其正面价值，关键在于如何搭配。', date:'2025-05-22' },
+            { tag:'磁场详解', title:'绝命磁场解析：冲动、破财与大起大落', url:'/articles/jueming-xiangjie.html', desc:'绝命磁场代表破财和冲动。拥有绝命磁场的人敢拼敢闯，但也容易大起大落。', date:'2025-05-22' },
+            { tag:'磁场详解', title:'六煞磁场详解：情感、情绪与烂桃花', url:'/articles/liusha-xiangjie.html', desc:'六煞磁场代表烂桃花和情绪问题。适合服务行业，但需要注意情绪管理。', date:'2025-05-21' },
+            { tag:'磁场详解', title:'五鬼磁场：变动、才华与血光之灾', url:'/articles/wugui-xiangjie.html', desc:'五鬼磁场代表变动和才华，拥有五鬼磁场的人聪明过人但人生多波折。', date:'2025-05-21' },
+            { tag:'组合解析', title:'生气加天医组合：贵人送财的奥秘', url:'/articles/shengqi-tianyi-zuhe.html', desc:'生气+天医是最经典的吉星组合之一，代表通过贵人和人脉获得财富。', date:'2025-05-20' },
+            { tag:'组合解析', title:'天医加延年组合：财富与事业双丰收', url:'/articles/tianyi-yannian-zuhe.html', desc:'天医+延年代表既有财富又有事业能力，是追求事业成功者的首选组合。', date:'2025-05-20' },
+            { tag:'进阶知识', title:'手机号码中0和5的特殊作用全解析', url:'/articles/ling-he-wu-teshu.html', desc:'数字0和5在八星磁场中有特殊的修饰作用，能增强或减弱前后数字的能量。', date:'2025-05-19' }
+        ];
+
+        function renderArticles(filter) {
+            const list = document.getElementById('articlesList');
+            const filtered = filter ? ARTICLES.filter(a => a.tag === filter) : ARTICLES;
+            list.innerHTML = filtered.map(a => `
+                <div class="article-card">
+                    <div class="tag">${a.tag}</div>
+                    <h3><a href="${a.url}">${a.title}</a></h3>
+                    <p>${a.desc}</p>
+                    <div class="meta">${a.date}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderFilters() {
+            const container = document.getElementById('categoryFilter');
+            const tags = [...new Set(ARTICLES.map(a => a.tag))];
+            container.innerHTML = `<button class="filter-btn active" onclick="filterArticles('')">全部</button>` +
+                tags.map(t => `<button class="filter-btn" onclick="filterArticles('${t}')">${t}</button>`).join('');
+        }
+
+        function filterArticles(tag) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            renderArticles(tag);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFilters();
+            renderArticles('');
+        });
+    </script>
+</body>
+</html>
