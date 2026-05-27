@@ -500,7 +500,7 @@
     }
 
     const _origDisp = displayResult;
-    displayResult = function(r) { _origDisp(r); setTimeout(() => { try { displayEnhanced(r); document.getElementById('comboContainer').style.display = 'block'; } catch(e){} }, 200); };
+    displayResult = function(r) { _origDisp(r); try { displayEnhanced(r); } catch(e){} var cc = document.getElementById('comboContainer'); if(cc) cc.style.display = 'block'; };
 function init() {
         initNav();
         initLangSwitcher();
