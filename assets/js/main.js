@@ -14,15 +14,15 @@
 
     const i18n = {
         // 导航
-        'nav.home':       { 'zh-CN': '首页',      'zh-TW': '首頁',      'en': 'Home' },
-        'nav.analyzer':   { 'zh-CN': '号码分析',  'zh-TW': '號碼分析',  'en': 'Analysis' },
-        'nav.yijing':     { 'zh-CN': '数字与易经','zh-TW': '數字與易經','en': 'I-Ching & Numbers' },
-        'nav.apps':       { 'zh-CN': '数字应用',  'zh-TW': '數字應用',  'en': 'Applications' },
-        'nav.app':        { 'zh-CN': 'APP下载',   'zh-TW': 'APP下載',   'en': 'App' },
-        'nav.contact':    { 'zh-CN': '联系我们',  'zh-TW': '聯繫我們',  'en': 'Contact' },
+        'nav.home':       { 'zh-CN': '首页',          'zh-TW': '首頁',          'en': 'Home' },
+        'nav.analyzer':   { 'zh-CN': '号码分析',      'zh-TW': '號碼分析',      'en': 'Analysis' },
+        'nav.yijing':     { 'zh-CN': '数字与易经',    'zh-TW': '數字與易經',    'en': 'I-Ching & Numbers' },
+        'nav.apps':       { 'zh-CN': '数字应用',      'zh-TW': '數字應用',      'en': 'Applications' },
+        'nav.app':        { 'zh-CN': 'APP下载',       'zh-TW': 'APP下載',       'en': 'App' },
+        'nav.contact':    { 'zh-CN': '联系我们',      'zh-TW': '聯繫我們',      'en': 'Contact' },
 
         // Hero
-        'hero.title':     { 'zh-CN': '探索数字背后的能量',   'zh-TW': '探索數字背後的能量',   'en': 'Discover the Power Behind Numbers' },
+        'hero.title':     { 'zh-CN': '探索数字背后的能量',       'zh-TW': '探索數字背後的能量',       'en': 'Discover the Power Behind Numbers' },
         'hero.subtitle':  { 'zh-CN': '依托八星磁场理论，解读手机号码中的数字能量密码，助您了解财运、事业、感情与健康', 'zh-TW': '依託八星磁場理論，解讀手機號碼中的數字能量密碼，助您了解財運、事業、感情與健康', 'en': 'Based on the Eight Star Magnetic Field Theory, decode the energy patterns in your phone number to gain insights into wealth, career, relationships, and health.' },
         'hero.cta':       { 'zh-CN': '免费分析号码', 'zh-TW': '免費分析號碼', 'en': 'Analyze Your Number Free' },
 
@@ -34,8 +34,6 @@
         'ana.analyzing':  { 'zh-CN': '分析中...',         'zh-TW': '分析中...',         'en': 'Analyzing...' },
         'ana.rescore':    { 'zh-CN': '综合评分',          'zh-TW': '綜合評分',          'en': 'Overall Score' },
         'ana.tail':       { 'zh-CN': '尾号能量',          'zh-TW': '尾號能量',          'en': 'Last Digits Energy' },
-        'ana.highlight':  { 'zh-CN': '亮点',              'zh-TW': '亮點',              'en': 'Highlights' },
-        'ana.warning':    { 'zh-CN': '注意',              'zh-TW': '注意',              'en': 'Warnings' },
         'ana.reanalyze':  { 'zh-CN': '重新分析',          'zh-TW': '重新分析',          'en': 'Re-analyze' },
 
         // 数字与易经
@@ -46,7 +44,7 @@
         'yj.bagua':       { 'zh-CN': '八卦与数字',       'zh-TW': '八卦與數字',       'en': 'Trigrams & Numbers' },
         'yj.baguaDesc':   { 'zh-CN': '先天八卦对应数字：乾一、兑二、离三、震四、巽五、坎六、艮七、坤八。每个卦象都代表着特定的能量频率。', 'zh-TW': '先天八卦對應數字：乾一、兌二、離三、震四、巽五、坎六、艮七、坤八。每個卦象都代表著特定的能量頻率。', 'en': 'The eight trigrams correspond to numbers: Qian-1, Dui-2, Li-3, Zhen-4, Xun-5, Kan-6, Gen-7, Kun-8. Each trigram represents a specific energy frequency.' },
         'yj.wuxing':      { 'zh-CN': '五行生克',         'zh-TW': '五行生剋',         'en': 'Five Elements' },
-        'yj.wuxingDesc':  { 'zh-CN': '五行（金木水火土）之间存在相生相克的关系。数字能量中的八星磁场与五行密切对应，生克平衡则吉，失衡则凶。', 'zh-TW': '五行（金木水火土）之間存在相生相剋的關係。數字能量中的八星磁場與五行密切對應，生剋平衡則吉，失衡則凶。', 'en': 'The Five Elements (Metal, Wood, Water, Fire, Earth) interact through generation and control cycles. In number energy, the Eight Stars closely correspond to the Five Elements. Balanced elements bring fortune, imbalance brings challenges.' },
+        'yj.wuxingDesc':  { 'zh-CN': '五行（金木水火土）之间存在着相生相克的关系。数字能量中的八星磁场与五行密切对应，生克平衡则吉，失衡则凶。', 'zh-TW': '五行（金木水火土）之間存在著相生相剋的關係。數字能量中的八星磁場與五行密切對應，生剋平衡則吉，失衡則凶。', 'en': 'The Five Elements (Metal, Wood, Water, Fire, Earth) interact through generation and control cycles. In number energy, the Eight Stars closely correspond to the Five Elements. Balanced elements bring fortune, imbalance brings challenges.' },
 
         // 数字应用
         'appsec.title':   { 'zh-CN': '数字应用场景',    'zh-TW': '數字應用場景',    'en': 'Number Applications' },
@@ -186,7 +184,7 @@
             mainNav.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     mainNav.classList.remove('open');
-                    if (menuBtn) menuBtn.textContent = '☰';
+                    menuBtn.textContent = '☰';
                 });
             });
         }
@@ -247,6 +245,172 @@
     }
 
     /* ==========================================
+       Analyzer Form
+       ========================================== */
+    function initAnalyzer() {
+        const form = document.getElementById('analyzeForm');
+        const phoneInput = document.getElementById('phoneInput');
+        const analyzeBtn = document.getElementById('analyzeBtn');
+        const btnText = document.getElementById('btnText');
+        const btnSpinner = document.getElementById('btnSpinner');
+        const resultArea = document.getElementById('result-area');
+
+        if (!form) return;
+
+        // 只允许输入数字
+        phoneInput.addEventListener('input', () => {
+            phoneInput.value = phoneInput.value.replace(/\D/g, '').slice(0, 11);
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const phone = phoneInput.value.trim();
+            if (phone.length !== 11) {
+                phoneInput.style.borderColor = '#f87171';
+                phoneInput.focus();
+                setTimeout(() => {
+                    phoneInput.style.borderColor = '';
+                }, 2000);
+                return;
+            }
+
+            // 显示加载状态
+            btnText.style.display = 'none';
+            btnSpinner.style.display = 'inline-flex';
+            analyzeBtn.disabled = true;
+
+            setTimeout(() => {
+                // 调用分析引擎
+                const result = analyzePhone(phone);
+
+                if (!result.valid) {
+                    btnText.style.display = 'inline';
+                    btnSpinner.style.display = 'none';
+                    analyzeBtn.disabled = false;
+                    alert(t('ana.error'));
+                    return;
+                }
+
+                displayResult(result);
+                resultArea.classList.add('visible');
+
+                btnText.style.display = 'inline';
+                btnSpinner.style.display = 'none';
+                analyzeBtn.disabled = false;
+            }, 800);
+        });
+
+        // 重新分析
+        const resetBtn = document.getElementById('resetBtn');
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+                resultArea.classList.remove('visible');
+                resultArea.style.display = 'none';
+                phoneInput.value = '';
+                phoneInput.focus();
+            });
+        }
+    }
+
+    /* ==========================================
+       Display Analysis Result
+       ========================================== */
+    function displayResult(result) {
+        // 手机号显示
+        document.getElementById('phoneDisplay').textContent = result.formatted;
+
+        // 综合评分
+        const score = result.overallScore;
+        const scoreRing = document.getElementById('scoreRing');
+        scoreRing.textContent = score;
+        scoreRing.className = 'score-ring-sm';
+        if (score >= 75) scoreRing.classList.add('excellent');
+        else if (score >= 60) scoreRing.classList.add('good');
+        else if (score >= 40) scoreRing.classList.add('medium');
+        else scoreRing.classList.add('poor');
+
+        // 评分标题
+        document.getElementById('verdictTitle').textContent = result.overall;
+
+        // 段可视化
+        const segmentRow = document.getElementById('segmentRow');
+        segmentRow.innerHTML = '';
+        result.segments.forEach(seg => {
+            const block = document.createElement('div');
+            block.className = 'segment-block';
+            block.style.background = seg.fieldColor ? seg.fieldColor + '22' : 'rgba(255,255,255,.03)';
+            block.style.color = seg.fieldColor || '#666';
+            block.title = seg.fieldName;
+            block.innerHTML = `<span class="pair-num">${seg.pairStr}</span><span class="field-label">${seg.fieldName}</span>`;
+            segmentRow.appendChild(block);
+        });
+
+        // 字段统计
+        const fieldStats = document.getElementById('fieldStats');
+        fieldStats.innerHTML = '';
+        const fieldOrder = ['tianyi', 'shengqi', 'yannian', 'fuwei', 'huohai', 'jueming', 'liusha', 'wugui'];
+        fieldOrder.forEach(key => {
+            const count = result.fieldCounts[key] || 0;
+            if (count === 0) return;
+            const field = MAGNETIC_FIELDS[key];
+            const item = document.createElement('div');
+            item.className = 'field-stat-item-hz';
+            item.innerHTML = `
+                <span class="stat-dot" style="background:${field.color}"></span>
+                <span class="stat-name">${field.name}</span>
+                <span class="stat-count">${count}</span>
+                <span class="stat-badge ${field.type === '吉' ? 'badge-ji' : field.type === '凶' ? 'badge-xiong' : 'badge-ping'}">${field.type}</span>
+            `;
+            fieldStats.appendChild(item);
+        });
+
+        // 尾号分析
+        const tailDiv = document.querySelector('.tail-text');
+        if (result.tailAnalysis) {
+            tailDiv.textContent = result.tailAnalysis.text;
+        } else {
+            tailDiv.textContent = '';
+        }
+
+        // 详情（亮点+警告）
+        const details = document.getElementById('resultDetails');
+        details.innerHTML = '';
+
+        const highlights = result.highlights || [];
+        const warnings = result.warnings || [];
+
+        if (highlights.length > 0) {
+            const mini = document.createElement('div');
+            mini.className = 'detail-mini highlight-mini';
+            const title = document.createElement('div');
+            title.className = 'mini-title';
+            title.textContent = t('ana.highlight') || '亮点';
+            mini.appendChild(title);
+            highlights.slice(0, 3).forEach(h => {
+                const span = document.createElement('span');
+                span.textContent = h;
+                mini.appendChild(span);
+            });
+            details.appendChild(mini);
+        }
+
+        if (warnings.length > 0) {
+            const mini = document.createElement('div');
+            mini.className = 'detail-mini warning-mini';
+            const title = document.createElement('div');
+            title.className = 'mini-title';
+            title.textContent = t('ana.warning') || '注意';
+            mini.appendChild(title);
+            warnings.slice(0, 3).forEach(w => {
+                const span = document.createElement('span');
+                span.textContent = w;
+                mini.appendChild(span);
+            });
+            details.appendChild(mini);
+        }
+    }
+
+    /* ==========================================
        Contact Form
        ========================================== */
     function initContactForm() {
@@ -257,11 +421,11 @@
                 const btn = form.querySelector('.btn-submit');
                 const originalText = btn.textContent;
                 const successMsg = {
-                    'zh-CN': '✓ 已发送',
-                    'zh-TW': '✓ 已發送',
-                    'en': '✓ Sent'
+                    'zh-CN': '✅ 已发送',
+                    'zh-TW': '✅ 已發送',
+                    'en': '✅ Sent'
                 };
-                btn.textContent = successMsg[currentLang] || '✓ Sent';
+                btn.textContent = successMsg[currentLang] || '✅ Sent';
                 btn.disabled = true;
                 setTimeout(() => {
                     btn.textContent = originalText;
@@ -279,6 +443,7 @@
         initNav();
         initLangSwitcher();
         initScrollEffects();
+        initAnalyzer();
         initContactForm();
 
         // 加载时应用默认语言
